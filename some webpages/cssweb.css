@@ -1,0 +1,168 @@
+body
+{
+  font-family: Georgia, "Bitstream Charter", serif;
+}
+
+#header1
+{
+  background-color:rgb(25, 56, 74);
+  
+  height:120px;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  padding-top:0px;
+  
+}
+#header1content
+{
+  color:white;
+  margin-left:120px;
+  align:right;
+  }
+
+
+#header2content
+{
+  color:white;
+  margin-left:120px;
+  align:right;
+  }
+#wrap	{
+		width: 1000px;
+		height: 65px; 
+		margin-left:200px; 
+		z-index: 2000;
+		position: relative;
+		
+		padding-top:8px;
+		padding-bottom:0px;
+		}
+	
+	.navbar		{
+				height: 40px;
+				padding: 0;
+				margin: 0;
+				position: absolute;
+				border-right: 1px solid #54879d;
+				}
+			
+		.navbar li 	{
+					height:40px;
+					width: 135.5px; 
+					float: left; 
+					text-align: center; 
+					list-style: none; 
+					font: normal 16px/1.2em Arial, Verdana, Helvetica;  
+					padding: 0;
+					margin: 0;
+					background-color: rgb(5, 30, 66);					
+					}
+
+			.navbar a	{							
+						padding: 10px 0; 
+						border-left: 1px solid #54879d;
+						border-right: 1px solid #1f5065;
+						text-decoration: none;
+						color: white;
+						display: block;
+						}
+
+				.navbar li:hover, a:hover	{background-color: #54879d;}
+								
+				.navbar li ul 	{
+								display: none;
+								height: auto;									
+								margin: 0;
+								padding: 0;								
+								}
+				
+				.navbar li:hover ul {
+									display: block;									
+									}
+									
+				.navbar li ul li	{ 
+										font-size:12px;
+										background-color: #54879d;}
+				
+				.navbar li ul li a 	{
+									border-left: 1px solid #1f5065; 
+									border-right: 1px solid #1f5065; 
+									border-top: 1px solid #74a3b7; 
+									border-bottom: 1px solid #1f5065; 
+									}
+				
+				.navbar li ul li a:hover	{background-color: #366b82;}
+
+
+#content
+{
+  margin-top:0px;
+  margin-bottom:5px;
+  margin-left:200px;
+  padding-bottom:10px;
+  background-color:#F3F3F3;
+  color:#4C3300;
+  width:950px;
+  
+  border:1px solid #DADADA;
+}
+
+
+#content a:hover
+{
+  background-color:#F3F3F3;
+}
+
+
+h2.contenthead  /*for headings in content section */
+{
+  text-align:center;
+  color:#f47321;
+  font-size:24px;
+}
+
+h3.contenthead  /*for headings in content section */
+{
+  text-align:left;
+  color:#f47321;
+  font-size:18px;
+  padding-left:20px;
+}
+
+#aboutcse
+{
+   margin-left:20px;
+   float:left;
+   width:500px;
+   height:200px;
+   font-size:16px;
+}
+
+
+#rightcontent   /*section containing news and acheivement in home page*/
+{
+  float:right;
+  width:400px;
+  height:500px;
+  font-size:14px;
+  color:#002244;
+  border-left:1px solid #DADADA; 
+}  
+#rightcontent li
+{
+ border-bottom:1px solid #DADADA;
+ padding-top:10px;
+ padding-bottom:10px;
+ font-size:12px;
+}
+
+
+
+
+#copyright
+{
+  background-color:#f47321;
+  text-align:center;
+}
