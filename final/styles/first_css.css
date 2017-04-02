@@ -1,0 +1,33 @@
+#buttons {
+	width: 200px;
+	height: 70px;
+	margin: 20px auto;
+	border: 1px dotted black;
+}
+#buttons button {
+	width: 90px;
+	height: 30px;
+	margin-bottom: 10px;
+}
+#button1 {
+	float: left;
+}
+#button2 {
+	float: right;
+}
+#new_user_form, #existing_user_form {
+	display: none;
+	margin: 0 auto;
+	width: 200px;
+	border: 1px dotted black;
+}
+input {
+	padding: 5px;
+}
+input[type=text] {
+	width: 200px;
+}
+input[type=submit] {
+	display: block;
+	margin: 5px auto;
+}

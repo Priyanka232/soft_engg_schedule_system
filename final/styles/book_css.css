@@ -1,0 +1,15 @@
+#facs_form, #confocal_form {
+	display: block;
+	width: 300px;
+	height: 50px;
+}
+#facs_form {
+	margin: 100px auto 20px;
+}
+#confocal_form {
+	margin: 20px auto;
+}
+input[type=submit] {
+	width: 300px;
+	height: 50px;
+}
