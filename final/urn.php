@@ -42,6 +42,7 @@
 		$_SESSION['urn'] = $urn;
 		setRequiredAmount($_SESSION['email']);
 		echo $urn."<br>".$amount;
+		include 'mail.php';
 	}
 ?>
 <html>

@@ -108,7 +108,6 @@
 		}
 		var dateselect = document.getElementById("demo");
 		dateselect.onfocus = function() {timeslots.style.display = "none"};
-		dateselect.onblur = function() {timeslots.style.display = "initial"};
 		$('#demo').dcalendarpicker();
 		
 		function showTimetable(str) {	
@@ -120,7 +119,7 @@
 		if (str == "") {
 			document.getElementById("ah1").innerHTML = "";
 			return;
-		} else { 
+		} else {
 				if (window.XMLHttpRequest) {
 					// code for IE7+, Firefox, Chrome, Opera, Safari
 					xmlhttp = new XMLHttpRequest();
@@ -128,12 +127,20 @@
 					// code for IE6, IE5
 					xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
 				}
+				xmlhttp.open("GET","find.php?q="+correctDate,true);
+				xmlhttp.send();
 				xmlhttp.onreadystatechange = function() {
 					if (this.readyState == 4 && this.status == 200) {
 						var dates = JSON.parse(this.responseText);
 						timeslots.style.display = "initial";
 						for(var i = 0; i < slot.length; i++) {
-							if(dates && slot[i].id == dates['start_time']) {
+							var flag = 0;
+							for (var key in dates) {
+								if (dates.hasOwnProperty(key)) {
+									if(dates[key] == slot[i].id) flag = 1;
+								}
+							}
+							if(dates && flag) {
 								slot[i].style.backgroundColor = "red";
 								slot[i].style.cursor = "initial";
 							}
@@ -144,8 +151,6 @@
 						}
 					}
 				};
-				xmlhttp.open("GET","find.php?q=" + correctDate,true);
-				xmlhttp.send();
 			}
 		}
 		var form = document.getElementById("date_time_form");

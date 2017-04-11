@@ -1,16 +1,20 @@
 <?php
+	session_start();
 	$username = 'root';
 	$password = '';
 	$db = 'project';
-	//print_r ($_GET);
 	$conn = new mysqli('localhost', $username, $password, $db);
 	if ($conn->connect_error) {
 		die("Connection failed: " . $conn->connect_error);
 	}
-	list($month,$day,$year) = explode("/",$_GET['q']);
+	list($day,$month,$year) = explode("/",$_GET['q']);
 	$date = $year."-".$month."-".$day;
-	$sql = "select start_time from slot where date = '" . $date . "';";
+	$machine = $_SESSION['machine'];
+	$sql = "select start_time from slot where date = '$date' and machine = '$machine';";
 	$result = $conn->query($sql);
-	$row = mysqli_fetch_assoc($result); 
-	echo json_encode($row);
+	$send = [];
+	while ($row = mysqli_fetch_assoc($result)) {
+		$send[] = $row['start_time'];
+	}
+	echo json_encode($send, JSON_FORCE_OBJECT);
 ?>

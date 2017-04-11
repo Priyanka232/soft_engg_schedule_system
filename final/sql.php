@@ -1,7 +1,7 @@
 <?php
 	$username = 'root';
 	$password = '';
-	$db = 'bsbe_db';
+	$db = 'project';
 	
 	$conn = new mysqli('localhost', $username, $password, $db);
 	if ($conn->connect_error) {

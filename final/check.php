@@ -15,9 +15,8 @@
 	function removeSpaces($string) {
 		return str_replace(' ','',$string);
 	}
-	
+	$email = removeSpaces($_POST['email']);
 	if(count($_POST) === 1) {	//if existing user
-		$email = removeSpaces($_POST['email']);
 		$sql = "select count(*) from customer where cust_email = '" . $email . "';";
 		$result = $conn->query($sql);
 		$row = mysqli_fetch_assoc($result);
@@ -31,12 +30,14 @@
 		}
 	}
 	else {	//if new user
+		echo $_POST['mobile'];
 		$mobile = removeSpaces($_POST['mobile']);
+		echo $mobile;
 		if(!isValid($email, $mobile)) {
-			//goback("Email format or mobile number is incorrect");
+			goback("Email format or mobile number is incorrect");
 		}
 		else {
-			$sql = "INSERT INTO customer VALUES ('$email', '".removeSpaces($_POST['name'])."', '$mobile', '".removeSpaces($_POST['address'])."')";
+			$sql = "INSERT INTO customer VALUES ('$email', '".$_POST['name']."', $mobile, '".$_POST['address']."')";
 			//proceed or go back
 			if ($conn->query($sql)){
 				$_SESSION['logged_in'] = true;
