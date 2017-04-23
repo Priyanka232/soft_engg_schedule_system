@@ -14,7 +14,7 @@ Descrition:
 
 1. Files included :
                     htdocs/projects = book, check, checkout, urn, payment, first, sql, checkthebooked   - .php files
-                                    = bsbe_db                                                           - .sql.zip files
+                                    = project                                                           - .sql.zip files
                                     = readme.txt                                                        - other files
 
 
@@ -22,8 +22,8 @@ Descrition:
                  a. Install XAMPP.
                  b. Copy htdocs folder into XAMPP folder and merge them.
                  c. Open XAMPP control panel and start apache and mysql.
-                 d. Click on admin beside start of mysql. Create new database in left panel and name it bsbe_db and select it.
-                 e. Click on import and select the htdocs/project/bsbe_db.sql.zip file and save. Hence database is ready.
+                 d. Click on admin beside start of mysql. Create new database in left panel and name it project and select it.
+                 e. Click on import and select the htdocs/final/project.sql file and save. Hence database is ready.
                  f. Open new tab in the browser and enter localhost/project/first.php
                  g. Hence you will be able to testrun the webware. The changes made to database are visible in localhost/phpmyadmin/, in bsbe_db
 
